@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: tanviconfig
+  namespace:  default
+
+data:
+  app:  tanviapp
+  color:  red
