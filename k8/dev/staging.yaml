@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tanviapp1-staging
+  namespace: default
+  labels:
+    tier: frontend
+    app: nginx
+spec:
+  selector:
+    matchLabels:
+      app: staging1
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: staging1
+    spec:
+      containers:
+        - name: tanviapp1
+          image: nginx
